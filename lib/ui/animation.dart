@@ -1,4 +1,3 @@
-import 'package:animation_app/ui/drawer.dart';
 import 'package:flutter/material.dart';
 import 'method.dart';
 import 'image.dart';
@@ -44,14 +43,14 @@ class _MyAnimationState extends State<MyAnimation> with SingleTickerProviderStat
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       home: Scaffold(
         appBar: Home_AppBar(),
-        backgroundColor: Colors.amber,
-        drawer: MyDraw(),
+        backgroundColor: Colors.lightGreen[700],
         body: Center(          
           child: Column(
             children: <Widget>[
-              con1(150* animation.value + 50, 150*animation.value + 50 ) ,
+              con1(200* animation.value + 50, 250*animation.value + 50 ) ,
               GestureDetector(
                 onTap: () {
                   myanicon.forward(from: 0.2);
@@ -59,7 +58,29 @@ class _MyAnimationState extends State<MyAnimation> with SingleTickerProviderStat
                 },
                 child: Column(
                   children: <Widget>[
-                  Topic('Created By - \n \t   \t    \t   Akash Pandey' , 25* animation.value + 5 , 100*animation.value + 50) ,       
+                  Topic(' Hi ,  I am  Akash ' , 25* animation.value + 5 , 50*animation.value + 20) ,     
+                  SizedBox(
+                    
+                    child: FadeAnimatedTextKit(
+                    onTap: () {
+                      print("Clicked");
+                    },
+                    text: [
+                      "Cloud Enthusiast",
+                      "Flutter Developer",
+                      "Software Developer",
+                      "DevOPs Enthusiast",
+                    ],
+                    textStyle: TextStyle(
+                      fontSize: 30*animation.value+2, 
+                      fontWeight: FontWeight.bold ,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.start,
+                    alignment: AlignmentDirectional.topStart // or Alignment.topLeft
+                    ),
+                  ),
+  
                   ],
                 ),              
               ),
