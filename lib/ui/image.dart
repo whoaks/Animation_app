@@ -14,29 +14,6 @@ con1(w , h) {
   );
 }
 
-con2() {
-  return Row(
-  mainAxisSize: MainAxisSize.min,
-  children: <Widget>[
-    SizedBox(width: 20.0, height: 40.0),
-    Text(
-      "Be",
-      style: TextStyle(fontSize: 20.0),
-    ),
-    SizedBox(width: 20.0, height: 40.0),
-    RotateAnimatedTextKit(
-      onTap: () {
-        print("Tap Event");
-      },
-      text: ["AWESOME", "OPTIMISTIC", "DIFFERENT"],
-      textStyle: TextStyle(fontSize: 20.0, fontFamily: "Horizon"),
-      textAlign: TextAlign.start,
-      alignment: AlignmentDirectional.topStart // or Alignment.topLeft
-    ),
-  ],
-);
-}
-
 Topic(topic_name , size , height) {
   return Container(
     margin: EdgeInsets.only(top: 20 , bottom: 35 , left: 10 , right: 20),
